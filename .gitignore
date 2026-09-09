@@ -1,0 +1,10 @@
+# 原始大图保留在本地，网站使用 assets 内的 WebP。
+/*.png
+assets/contact-sheet.jpg
+node_modules/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+Thumbs.db

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="DingMao 的个人设计作品集，探索 UI、品牌视觉与产品设计。">
+  <meta name="theme-color" content="#090909"><title>DingMao — 设计作品集</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23090909'/%3E%3Ctext x='7' y='29' font-size='27' fill='%23ff784b'%3E✳%3C/text%3E%3C/svg%3E">
+  <link rel="preload" href="assets/hero.webp" as="image"><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="gallery.css">
+  <script src="content.js" defer></script><script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至正文</a>
+  <header class="header">
+    <a class="brand" href="#home" aria-label="DingMao 首页">dingmao<span class="asterisk">✳</span></a>
+    <nav aria-label="主导航"><a href="#home" class="active">首屏 <small>01</small></a><a href="#info">基本信息 <small>02</small></a><a href="#works">作品 <small>03</small></a><a href="#about">关于我 <small>04</small></a></nav>
+    <a class="header-contact" href="#contact">聊聊设计 <span>↗</span></a>
+    <button class="menu-toggle" aria-label="打开导航菜单" aria-expanded="false">菜单 <span>＋</span></button>
+  </header>
+  <main id="main">
+    <section id="home" class="hero" aria-label="首屏">
+      <div class="hero-top"><span><i class="status-dot"></i> PERSONAL PORTFOLIO</span><span>DESIGN WITH INTENTION / 2026</span></div>
+      <h1 class="sr-only">DingMao 2026 设计作品集</h1>
+      <div class="hero-frame"><img src="assets/hero.webp" width="2560" height="1440" alt="DingMao 2026 设计作品集首图：暖色灯光下的设计师卡通形象" fetchpriority="high"></div>
+      <div class="hero-bottom"><span>用设计，让想法发生。</span><a href="#info">向下探索 <span class="down">↓</span></a><span class="muted">UI / BRAND / PRODUCT</span></div>
+    </section>
+    <section id="info" class="section info-section">
+      <div class="section-label"><span>01 / THE DESIGNER</span><span>基本信息</span></div>
+      <div class="intro reveal"><h2>你好，我是 <span class="serif">DingMao.</span><br>让创意有形，<br><span class="muted">让体验有温度。</span><span class="orange">✳</span></h2><div class="intro-copy"><span class="eyebrow">A LITTLE INTRODUCTION</span><p>专注 UI 设计、品牌视觉与产品全链路设计。<br>在理性与感性之间，探索更好的设计表达。</p><p class="placeholder-note">这里将放置你的个人简介，介绍你的设计方向、擅长领域与职业经历。</p><a class="text-link" href="#about">多了解我一点 <span>↗</span></a></div></div>
+      <div class="info-grid reveal"><article><span class="meta">01 / ROLE</span><h3>UI / 视觉设计师</h3><p>职业方向 · 可替换</p></article><article><span class="meta">02 / LOCATION</span><h3>你的城市 <span>↗</span></h3><p>工作与生活所在地 · 待填写</p></article><article><span class="meta">03 / FOCUS</span><h3>从想法，到体验</h3><p>界面设计 / 品牌视觉 / 创意探索</p></article><article><span class="meta">04 / STATUS</span><h3><i class="status-dot"></i> 保持好奇，持续创作</h3><p>当前状态 · 可替换</p></article></div>
+    </section>
+    <section id="works" class="section works-section">
+      <div class="section-label"><span>02 / SELECTED WORK</span><span>作品</span></div>
+      <div class="works-heading reveal"><h2>精选作品<span class="orange">.</span></h2><p>一些实践，一些探索。<br><span class="muted">想法在这里，成为看得见的作品。</span></p></div>
+      <div class="filter-bar"><div class="filters" role="group" aria-label="作品分类"><button class="selected" data-filter="all" aria-pressed="true">全部作品 <sup>06</sup></button><button data-filter="brand" aria-pressed="false">品牌视觉</button><button data-filter="creative" aria-pressed="false">创意探索</button><button data-filter="ui" aria-pressed="false">UI / 产品</button></div><span class="collection-note">A CURATED COLLECTION ↙</span></div>
+      <div class="gallery-toolbar"><span>以不同视角，探索作品。</span><div class="view-switch" role="group" aria-label="作品布局"><button class="selected" data-view="orbit" aria-pressed="true">◎ 环形</button><button data-view="grid" aria-pressed="false">▦ 平铺</button></div></div>
+      <div class="gallery-stage">
+        <div class="gallery-center"><div class="orbit-mark" aria-hidden="true"><i></i><i></i><i></i></div><span id="gallery-meta">SELECTED WORK</span><h3 id="gallery-title">创意，自有轨迹。</h3></div>
+        <div id="work-grid" class="orbit-gallery" aria-label="作品画廊"></div>
+        <div class="orbit-controls"><button data-orbit-step="-1" aria-label="向左转动作品">←</button><span>EXPLORE THE ORBIT</span><button data-orbit-step="1" aria-label="向右转动作品">→</button></div>
+      </div>
+      <p class="works-footnote"><span><i class="status-dot"></i> 更多灵感，正在发生</span><span>持续更新 / WORK IN PROGRESS</span></p>
+    </section>
+    <section id="about" class="section about-section">
+      <div class="section-label"><span>03 / BEYOND THE PIXELS</span><span>关于我</span></div>
+      <div class="about-grid reveal"><div class="about-art" aria-hidden="true"><span class="art-top">ALWAYS CURIOUS.</span><span class="big-star">✳</span><span class="art-bottom">MAKE IT MEANINGFUL. ↗</span></div><div class="about-copy"><span class="eyebrow">MORE THAN A DESIGNER</span><h2>不止于像素，<br>也关乎<span class="serif">感受。</span></h2><p>相信好的设计，既解决问题，也触动人心。<br>从细节出发，让每一次表达都有自己的性格。</p><p class="placeholder-note">这里可以写下你的设计理念、成长经历，或是工作之外的兴趣，让来到这里的人更了解真实的你。</p><div class="tags"><span>设计思考</span><span>视觉探索</span><span>持续学习</span></div><div class="experience"><span>经历 / EXPERIENCE</span><p>你的下一段故事，待填入 <span>↗</span></p></div></div></div>
+    </section>
+    <section id="contact" class="contact section reveal"><div class="section-label"><span>HAVE AN IDEA?</span><span>期待下一次合作</span></div><h2>一起创造<br><span class="serif">一些不一样。</span><span class="orange">↗</span></h2><div class="contact-bottom"><p>从一个想法，开始一段有趣的对话。</p><span id="contact-detail" class="contact-placeholder">联系方式 · 待填写</span></div></section>
+  </main>
+  <footer><a class="brand" href="#home">dingmao<span class="asterisk">✳</span></a><span>© 2026 DINGMAO · 用心设计，持续探索</span><a href="#home">回到顶部 ↑</a></footer>
+  <dialog id="project-dialog" aria-labelledby="dialog-title"><div class="dialog-top"><span class="meta">PROJECT PREVIEW / 作品预览</span><button id="close-dialog" aria-label="关闭作品预览">关闭 ×</button></div><div class="dialog-content"><span id="dialog-category" class="eyebrow"></span><h2 id="dialog-title"></h2><p id="dialog-description"></p><div id="dialog-gallery"></div></div></dialog>
+</body>
+</html>

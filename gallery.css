@@ -1,0 +1,40 @@
+/* 作品画廊：桌面椭圆轨道，移动端缩减尺寸；可切换平铺。 */
+.works-section{padding-top:70px;padding-bottom:32px}
+.works-section .section-label{margin-bottom:26px}
+.works-heading{margin-bottom:30px}
+.works-heading h2{font-size:38px;letter-spacing:-1px}
+.works-heading p{font-size:10px}
+.filter-bar{margin-bottom:0;border-bottom:1px solid #222;padding-bottom:18px}
+.filters button{border:0;border-radius:0;background:transparent;padding:9px 13px;color:#777}
+.filters button:first-child{padding-left:0}
+.filters button.selected{color:#eee;background:none;border:0}
+.filters button.selected:after{content:"";display:block;width:14px;height:1px;background:var(--accent);margin-top:8px}
+.filters button:after{content:"";display:block;width:14px;height:1px;margin-top:8px}
+.gallery-toolbar{display:flex;justify-content:space-between;align-items:center;padding:20px 0;font-size:10px;color:#70706b}
+.view-switch{display:flex;gap:17px}.view-switch button{background:none;border:0;color:#777;font-size:11px;padding:7px 0}.view-switch button.selected{color:#eee}
+.gallery-stage{position:relative;isolation:isolate;min-height:560px;height:min(62vw,74svh);max-width:1200px;margin:0 auto;overflow:hidden}
+.orbit-gallery{position:absolute;inset:20px 0 65px;transform:translate(var(--drift-x,0px),var(--drift-y,0px));transition:transform .6s ease-out}
+.orbit-card{position:absolute;left:var(--x);top:var(--y);width:clamp(100px,11vw,165px);transform:translate(-50%,-50%) scale(var(--size));z-index:var(--depth);transition:left .95s cubic-bezier(.22,.8,.25,1),top .95s cubic-bezier(.22,.8,.25,1),transform .55s;}
+.visual-button{display:block;width:100%;position:relative;background:none;border:0;padding:0;text-align:left;box-shadow:0 9px 34px #0004;transition:transform .45s,filter .4s}
+.visual-button>img{width:100%;height:auto;object-fit:contain;display:block;background:#101010;filter:brightness(.83);transition:filter .4s}
+.orbit-card.highlighted{z-index:60;transform:translate(-50%,-50%) scale(1.13)}
+.orbit-card.highlighted img{filter:brightness(1)}
+.visual-caption{position:absolute;bottom:0;left:0;right:0;display:flex;align-items:center;gap:8px;padding:24px 10px 10px;background:linear-gradient(transparent,#000d);font-size:10px;opacity:0;transition:opacity .3s;pointer-events:none}
+.visual-caption small{font-size:8px;color:#bbb}.visual-caption>span:nth-child(2){flex:1;line-height:1.5}
+.highlighted .visual-caption{opacity:1}
+.orbit-placeholder{display:flex;aspect-ratio:2/3;flex-direction:column;align-items:center;justify-content:center;background:#131313;border:1px solid #333;color:#999;gap:12px}.orbit-placeholder>span{font-size:50px;font-weight:200}.orbit-placeholder small{font-size:8px;letter-spacing:1.4px}
+.gallery-center{position:absolute;left:50%;top:49%;transform:translate(-50%,-50%);text-align:center;width:220px;pointer-events:none;z-index:0}
+.orbit-mark{height:27px;width:52px;position:relative;margin:0 auto 21px}.orbit-mark i{position:absolute;border:1px solid #d5d5c4;width:47px;height:17px;border-radius:50%;left:2px;top:5px;transform:rotate(-20deg)}.orbit-mark i:nth-child(2){transform:rotate(0)}.orbit-mark i:nth-child(3){transform:rotate(20deg)}
+.gallery-center>span{font-size:8px;letter-spacing:1.5px;color:#777}.gallery-center h3{font-size:13px;line-height:1.7;font-weight:400;margin-top:12px;color:#b4b4aa}
+.orbit-controls{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:24px;z-index:70}.orbit-controls>span{font-size:8px;letter-spacing:1.5px;color:#777;white-space:nowrap}.orbit-controls button{border:1px solid #303030;border-radius:50%;background:#090909;width:35px;height:35px;font-size:16px;transition:border-color .2s}.orbit-controls button:hover{border-color:#aaa}
+.works-footnote{margin-top:25px}
+.gallery-stage.is-grid{height:auto;min-height:0;overflow:visible;padding:25px 0}
+.is-grid .gallery-center,.is-grid .orbit-controls{display:none}
+.is-grid .orbit-gallery{position:relative;inset:auto;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:34px 24px;transform:none}
+.is-grid .orbit-card{position:relative;left:auto;top:auto;width:100%;transform:none;z-index:auto}
+.is-grid .visual-button{box-shadow:none}.is-grid .visual-button>img{filter:none}
+.is-grid .visual-caption{position:static;opacity:1;background:none;padding:13px 0;color:#aaa;font-size:10px}.is-grid .orbit-card.highlighted{transform:translateY(-7px)}
+@media(min-width:1600px){.orbit-card{width:165px}}
+@media(max-width:1000px){.gallery-stage{height:720px;min-height:0}.orbit-card{width:115px}.gallery-center{width:160px}.gallery-center h3{font-size:11px}.gallery-center>span{font-size:7px}.is-grid .orbit-gallery{grid-template-columns:repeat(3,minmax(0,1fr));gap:25px 18px}}
+@media(max-width:640px){.works-section{padding-top:50px}.works-heading{display:flex;align-items:center;gap:15px}.works-heading h2{font-size:30px;white-space:nowrap}.works-heading p{font-size:9px;line-height:1.7;margin:0}.works-heading p .muted{display:none}.gallery-stage{height:520px;margin-left:-6.82%;margin-right:-6.82%}.orbit-card{width:76px}.orbit-card.highlighted{transform:translate(-50%,-50%) scale(1.22)}.gallery-center{width:110px}.gallery-center>span{font-size:6px;letter-spacing:.5px}.gallery-center h3{font-size:10px}.orbit-mark{transform:scale(.8);margin-bottom:10px}.gallery-toolbar{font-size:9px;padding:14px 0}.view-switch button{font-size:10px}.visual-caption{font-size:8px;padding:16px 5px 5px;gap:3px}.visual-caption small{display:none}.orbit-placeholder small{font-size:5px;letter-spacing:.3px}.orbit-placeholder>span{font-size:26px}.orbit-controls{gap:16px;bottom:5px}.orbit-controls>span{font-size:7px}.orbit-controls button{width:32px;height:32px}.is-grid{margin:0}.is-grid .orbit-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 14px}.is-grid .orbit-card{width:100%}.is-grid .visual-caption{font-size:10px}.is-grid .orbit-placeholder small{font-size:8px}.filters{gap:7px}.filters button{padding:8px;font-size:10px}}
+@media(prefers-reduced-motion:reduce){.orbit-gallery,.orbit-card,.visual-button,.visual-button>img{transition:none}.orbit-gallery{transform:none}}
